@@ -1,0 +1,74 @@
+{
+  "name": "visa-market",
+  "description": "Landing page site our team",
+  "version": "0.0.1",
+  "author": "Tvolex <tisyanchin13@gmail.com>",
+  "private": true,
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon --watch src src/app.js  ",
+    "staging": "cross-env NODE_ENV=staging node src/app.js ",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+    "start": "node src/app.js",
+    "build:watch": "webpack --watch"
+  },
+  "engines": {
+    "node": "8.1.4",
+    "npm": "5.3.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true,
+      "mongo": true,
+      "amd": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "rules": {
+      "semi": 2
+    }
+  },
+  "dependencies": {
+    "express": "~4.15.4",
+    "animate.css": "*",
+    "css-loader": "*",
+    "hbs": "*",
+    "path": "*",
+    "serve-favicon": "*",
+    "vue": "*",
+    "vue-gettext": "*",
+    "vue-icon": "*",
+    "vue-router": "*",
+    "vue-template-compiler": "*",
+    "vuetify": "*",
+    "vuex": "*",
+    "babel-core": "*",
+    "babel-loader": "*",
+    "babel-plugin-transform-runtime": "*",
+    "babel-preset-es2015": "*",
+    "vue-html-loader": "*",
+    "vue-style-loader": "*"
+  },
+  "devDependencies": {
+    "babel-polyfill": "^6.26.0",
+    "cross-env": "^5.0.5",
+    "css-loader": "*",
+    "eslint": "*",
+    "eslint-plugin-import": "*",
+    "file-loader": "*",
+    "nodemon": "~1.12.1",
+    "sass-loader": "*",
+    "style-loader": "*",
+    "vue-hot-loader": "*",
+    "vue-hot-reload-api": "*",
+    "vue-loader": "*",
+    "vue-template-compiler": "*",
+    "webpack": "*"
+  }
+}
