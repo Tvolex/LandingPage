@@ -1,10 +1,12 @@
 <template>
-    <img class="img" src="imgs/3.jpg" alt="a">
+    <v-app>
+        <div class="stepper">Stepper</div>
+    </v-app>
 </template>
 
 <script>
     export default {
-        name: 'body1',
+        name: 'stepper',
         data() {
             return {
 
@@ -14,9 +16,8 @@
 </script>
 
 <style scoped>
-    .img {
-        margin-top: -65px;
-        width: 100%;
-        height: 100%;
+    .stepper {
+        position: fixed;
+
     }
 </style>

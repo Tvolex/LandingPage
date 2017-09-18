@@ -1,28 +1,26 @@
 <template >
     <v-toolbar light class="header">
-        <v-toolbar-title>Title</v-toolbar-title>
+        <v-spacer></v-spacer>
+        <v-toolbar-title>APT</v-toolbar-title>
         <v-spacer></v-spacer>
         <v-toolbar-items class="hidden-sm-and-down" v-for="item in items" :key="item.text">
             <v-btn flat>{{ item.text }}</v-btn>
         </v-toolbar-items>
+        <v-spacer></v-spacer>
     </v-toolbar>
 </template>
 
 <script>
     export default {
-        name: 'app',
+        name: 'header',
         data() {
             return {
                 items: [
-                    {
-                        text: 'Link One'
-                    },
-                    {
-                        text: 'Link Two'
-                    },
-                    {
-                        text: 'Link Three'
-                    }
+                    {text: 'Home'},
+                    {text: 'Skills'},
+                    {text: 'Portfolio'},
+                    {text: "Team"},
+                    {text: "Contact"},
                 ]
             }
         }
@@ -31,6 +29,6 @@
 
 <style scoped>
     .application .theme--light.toolbar {
-        background: transparent;
+        background: rgba(218, 218, 218, 0.7);
     }
 </style>
