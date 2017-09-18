@@ -11,29 +11,6 @@
     "start": "node src/app.js",
     "build:watch": "webpack --watch"
   },
-  "engines": {
-    "node": "8.1.4",
-    "npm": "5.3.0"
-  },
-  "eslintConfig": {
-    "env": {
-      "browser": true,
-      "node": true,
-      "es6": true,
-      "mongo": true,
-      "amd": true
-    },
-    "parserOptions": {
-      "ecmaVersion": 6,
-      "sourceType": "module",
-      "ecmaFeatures": {
-        "jsx": true
-      }
-    },
-    "rules": {
-      "semi": 2
-    }
-  },
   "dependencies": {
     "express": "~4.15.4",
     "animate.css": "*",
@@ -70,5 +47,28 @@
     "vue-loader": "*",
     "vue-template-compiler": "*",
     "webpack": "*"
+  },
+  "engines": {
+    "node": "8.1.4",
+    "npm": "5.3.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true,
+      "mongo": true,
+      "amd": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 6,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "rules": {
+      "semi": 2
+    }
   }
 }
