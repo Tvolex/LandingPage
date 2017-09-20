@@ -11,7 +11,7 @@
                         <li><span>Skills</span></li> <div class="circle"></div><br>
                         <li><span>Portfolio</span></li> <div class="circle"></div><br>
                         <li><span>Team</span></li> <div class="circle"></div><br>
-                        <li><span>Contact</span></li> <div class="circle"></div><br>
+                        <li v-on:click="asd" ><router-link to="#contact_us"> <span>Contact</span></router-link></li> <div class="circle"></div><br>
 
                     </ul><div class="vertLine"></div>
                 </div>
@@ -21,6 +21,11 @@
         </v-flex>
 
         <body-1></body-1>
+
+        <body-2></body-2>
+
+
+        <body-4></body-4>
 
         <router-link tag="v-btn" to="/asd"> Page 2</router-link>
 
@@ -35,19 +40,79 @@
     import header from './header.vue'
     import stepper from './stepper.vue'
     import body1 from './body-1.vue'
+    import body2 from './body-2.vue'
+    import body4 from './body-4.vue'
 
     export default {
         components: {
             "my-header": header,
             "stepper": stepper,
             "body-1": body1,
+            "body-2": body2,
+            "body-4": body4
         },
         name: 'main',
         data() {
             return {
-                msg: "Page 1 "
+                msg: "Page 1 ",
+                items: [
+                    {
+                        _id: 1,
+                        text: "Text",
+                        src: "https://images.unsplash.com/photo-1493994492236-f8d411fd81b6?dpr=1&auto=format&fit=crop&w=600&h=400&q=80&cs=tinysrgb&crop=",
+
+                    },
+                    {
+                        _id: 2,
+                        text: "Text",
+                        src: "https://images.unsplash.com/photo-1494707924465-e1426acb48cb?dpr=1&auto=format&fit=crop&w=600&h=400&q=80&cs=tinysrgb&crop=",
+
+                    },
+                    {
+                        _id: 3,
+                        text: "Text",
+                        src: "https://images.unsplash.com/photo-1494707924465-e1426acb48cb?dpr=1&auto=format&fit=crop&w=600&h=400&q=80&cs=tinysrgb&crop=",
+
+                    },
+                    {
+                        _id: 4,
+                        text: "Text",
+                        src: "https://images.unsplash.com/photo-1494707924465-e1426acb48cb?dpr=1&auto=format&fit=crop&w=600&h=400&q=80&cs=tinysrgb&crop=",
+
+                    },
+                    {
+                        _id: 5,
+                        text: "Text",
+                        src: "https://images.unsplash.com/photo-1493994492236-f8d411fd81b6?dpr=1&auto=format&fit=crop&w=600&h=400&q=80&cs=tinysrgb&crop=",
+
+                    },
+                    {
+                        _id: 6,
+                        text: "Text",
+                        src: "https://images.unsplash.com/photo-1494707924465-e1426acb48cb?dpr=1&auto=format&fit=crop&w=600&h=400&q=80&cs=tinysrgb&crop=",
+
+                    },
+                    {
+                        _id: 7,
+                        text: "Text",
+                        src: "https://images.unsplash.com/photo-1494707924465-e1426acb48cb?dpr=1&auto=format&fit=crop&w=600&h=400&q=80&cs=tinysrgb&crop=",
+
+                    },
+                    {
+                        _id: 8,
+                        text: "Text",
+                        src: "https://images.unsplash.com/photo-1494707924465-e1426acb48cb?dpr=1&auto=format&fit=crop&w=600&h=400&q=80&cs=tinysrgb&crop=",
+
+                    }
+                ]
             }
-        }
+        },
+
+        methods: {
+            asd() {
+                this.$router.push("#contact_us")
+            },
+        },
     }
 </script>
 
@@ -58,7 +123,7 @@
     }
     .stepper {
         position: fixed;
-
+        z-index: 1;
     }
     .card-nav {
         padding: 0;
