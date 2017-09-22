@@ -21,11 +21,11 @@
         </v-flex>
 
         <body-1></body-1>
-
         <body-2></body-2>
-
-
+        <body-3></body-3>
         <body-4></body-4>
+        <body-5></body-5>
+        <my-footer></my-footer>
 
         <router-link tag="v-btn" to="/asd"> Page 2</router-link>
 
@@ -35,22 +35,31 @@
 </template>
 
 <script >
-    //import animate from 'animate.css'
+    //import 'animate.css'
     import 'vuetify/dist/vuetify.min.css'
+
     import header from './header.vue'
     import stepper from './stepper.vue'
     import body1 from './body-1.vue'
     import body2 from './body-2.vue'
+    import body3 from './body-3.vue'
     import body4 from './body-4.vue'
+    import body5 from './body-5.vue'
+    import footer from './footer.vue'
 
     export default {
+
         components: {
             "my-header": header,
             "stepper": stepper,
             "body-1": body1,
             "body-2": body2,
-            "body-4": body4
+            "body-3": body3,
+            "body-4": body4,
+            "body-5": body5,
+            "my-footer": footer,
         },
+
         name: 'main',
         data() {
             return {

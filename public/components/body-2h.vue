@@ -32,6 +32,9 @@
 </script>
 
 <style scoped>
+    .application, .application>main>.container {
+        min-height: 150vh;
+    }
     .portfolioSection {
         position: absolute;
         margin-top: 52%;
@@ -58,7 +61,7 @@
         /*margin-top: 5%;*/
         width: 222px;
         height: 193px;
-        background-image: url("1.jpg");
+        background-image: url("https://images.unsplash.com/photo-1494707924465-e1426acb48cb?dpr=1&auto=format&fit=crop&w=250&h=200&q=80&cs=tinysrgb&crop=");
         background-size: cover;
     }
 

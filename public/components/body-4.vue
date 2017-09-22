@@ -1,14 +1,10 @@
 <template>
-    <transition
-            v-on:before-enter="beforeEnter"
-            v-on:enter="enter">
-        <img class="img" id="anchor2" src="imgs/2.jpg" alt="a">
-    </transition>
+    <v-parallax src="imgs/4.jpg"></v-parallax>
 </template>
 
 <script>
     export default {
-        name: 'body3',
+        name: 'body4',
         data() {
             return {
 
