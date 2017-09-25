@@ -1,5 +1,5 @@
 <template>
-    <v-app>
+    <main>
         <v-carousel icon="lens" id="carousel-view">
             <v-carousel-item
                     v-for="(item,i) in items"
@@ -24,14 +24,12 @@
 
             </v-carousel-item>
         </v-carousel>
-    </v-app>
+    </main>
 </template>
 
 <script>
-    import VCardTitle from "vuetify/src/components/VCard/VCardTitle";
 
     export default {
-        components: {VCardTitle},
         name: 'body-3',
         data() {
             return {

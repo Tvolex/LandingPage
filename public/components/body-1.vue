@@ -16,7 +16,9 @@
 <style scoped>
     .img {
         margin-top: -65px;
-        width: 100%;
-        height: 100%;
+        height: 110vh;
+        width: 100vw;
+        background-size: cover;
+        background-position: center;
     }
 </style>

@@ -1,22 +1,43 @@
 <template>
-    <v-app>
+    <main>
         <v-container float>
             <v-layout row wrap>
-                <div class="portfolioSection">
-                    <div class="workText">LATEST WORK</div>
-                    <div class="work">
+                <!--<div class="portfolioSection">-->
+                    <!--<div class="workText">LATEST WORK</div>-->
+                    <!--<div class="work">-->
 
-                        <div class="workBlock" v-for="item in items" v-bind:style="{'background-image': `url(${item.src})`}">
-                            <div class="workBlockText">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-                        </div>
-                    </div>
-                    <div class="more">VIEW MORE
-                        <span style="font-size: 20px; margin-left: 10px">→</span>
-                    </div>
-                </div>
+                        <!--<div class="workBlock" v-for="item in items" v-bind:style="{'background-image': `url(${item.src})`}">-->
+                            <!--<div class="workBlockText">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="more">VIEW MORE-->
+                        <!--<span style="font-size: 20px; margin-left: 10px">→</span>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <v-flex xs12 sm8 offset-sm2>
+                    <v-layout row>
+                        LATEST WORK
+                    </v-layout>
+                    <v-layout row wrap>
+                        <v-flex xs12 sm6 md4 lg3  v-for="item in items" :key="item._id">
+                            <v-card>
+                                <v-card-media :src="item.src" height="200px"></v-card-media>
+
+                            </v-card>
+                        </v-flex>
+                    </v-layout>
+                    <v-layout row>
+                        <v-flex xs12 offset-sm10 >
+                            <v-btn flat class="btnViewMore">VIEW MORE →</v-btn>
+                        </v-flex>
+
+                    </v-layout>
+
+                </v-flex>
+
             </v-layout>
         </v-container>
-    </v-app>
+    </main>
 
 </template>
 
@@ -81,6 +102,12 @@
 </script>
 
 <style scoped>
+    .btnViewMore {
+        margin-right: 20px;
+    }
+    .card {
+        margin: 20px 10px 10px 00px;
+    }
     .headline-Latest-Work {
         font-size: xx-large;
     }
@@ -101,9 +128,8 @@
 
 
     .portfolioSection {
-        position: absolute;
-        width: 100%;
-        height: 844px;
+        width: 100vw;
+        height: 100vh;
         /*background-color: red;*/
     }
     .workText {
