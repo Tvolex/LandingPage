@@ -22,7 +22,7 @@
                         <v-flex xs12 sm6 md4 lg3  v-for="item in items" :key="item._id">
                             <v-card>
                                 <v-card-media :src="item.src" height="200px"></v-card-media>
-
+                                <div class="workBlockText">Lorem ipsum dolor sit amet.</div>
                             </v-card>
                         </v-flex>
                     </v-layout>
@@ -162,14 +162,16 @@
 
 
     .workBlockText {
+        margin-top: -200px;
+        position: absolute;
         display: table-cell;
         text-align: center;
         text-overflow: clip;
         overflow: hidden;
         transition: 1s;
         opacity: 0;
-        width: 222px;
-        height: 193px;
+        width: 100%;
+        height: 100%;
         color: white;
         vertical-align: middle;
     }
@@ -202,4 +204,5 @@
         color: white;
         background-color: #4c5059;
     }
+
 </style>
