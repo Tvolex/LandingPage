@@ -27,8 +27,6 @@
         <body-5></body-5>
         <my-footer></my-footer>
 
-        <router-link tag="v-btn" to="/asd"> Page 2</router-link>
-
 
 
     </v-app>
@@ -128,7 +126,7 @@
 <style lang="scss">
 
     .application--light {
-        background-color: rgb(238, 238, 240);
+        background-color:white; //rgb(238, 238, 240);
     }
     .stepper {
         position: fixed;

@@ -1,6 +1,6 @@
 <template>
     <main>
-        <v-parallax src="imgs/3.jpg">
+        <v-parallax src="imgs/3.jpg" jumbotron>
             <v-container float>
                 <v-layout row wrap class="reviews">
                     <v-flex xs12 offset-xs0 sm10 offset-sm1 md10 offset-md2>
@@ -8,7 +8,7 @@
                             <v-flex xs12 sm5>
                                 <v-card>
                                     <v-card-media height="150px"
-                                                  style="border-radius: 50%; width: 150px"
+                                                  style="border-radius: 50%; width: 150px;"
                                                   class="avatar-image"
                                                   src="https://randomuser.me/api/portraits/men/1.jpg">
                                     </v-card-media>

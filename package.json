@@ -26,12 +26,12 @@
     "vue-gettext": "*",
     "vue-html-loader": "*",
     "vue-icon": "~1.1.6",
+    "vue-resize-directive": "~1.0.0",
     "vue-router": "*",
     "vue-style-loader": "*",
     "vue-template-compiler": "*",
-    "vuetify": "*",
-    "vuex": "*",
-    "vue-resize-directive": "~1.0.0"
+    "vuetify": "^0.15.7",
+    "vuex": "*"
   },
   "devDependencies": {
     "babel-polyfill": "^6.26.0",
