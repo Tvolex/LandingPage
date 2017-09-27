@@ -1,29 +1,37 @@
 <template>
     <main>
-        <v-carousel icon="lens" id="carousel-view">
-            <v-carousel-item
-                    v-for="(item,i) in items"
-                    v-bind:key="i"
-                    v-bind:src="item.src"
-                    transition="fade"
-                    class="carousel-item"
-                    reverseTransition="fade">
-                <div class="reviews">
-                    <div class="avatar">
-                        <v-card>
-                            <v-card-media height="150px" class="avatar-image" src="https://randomuser.me/api/portraits/men/1.jpg">
-                            </v-card-media>
-                            <br>
-                            <v-card-title class="avatar-name">
-                                Якийсь чувак
-                            </v-card-title>
-                        </v-card>
-                    </div>
-                    <div class="review"></div>
-                </div>
+        <v-parallax src="imgs/3.jpg">
+            <v-container float>
+                <v-layout row wrap class="reviews">
+                    <v-flex xs12 offset-xs0 sm10 offset-sm1 md10 offset-md2>
+                        <v-layout row wrap>
+                            <v-flex xs12 sm5>
+                                <v-card>
+                                    <v-card-media height="150px"
+                                                  style="border-radius: 50%; width: 150px"
+                                                  class="avatar-image"
+                                                  src="https://randomuser.me/api/portraits/men/1.jpg">
+                                    </v-card-media>
+                                    <br>
+                                    <v-card-title class="avatar-name">
+                                        Якийсь чувак
+                                    </v-card-title>
+                                </v-card>
+                            </v-flex>
+                            <v-flex xs12 sm7 >
+                                <v-card>
+                                    <br>
+                                    <v-card-title class="review white--text">
+                                        Тут я тіп оставив відгук, вобщем п!зд@та компашка пацани. Рекомендую!
+                                    </v-card-title>
+                                </v-card>
+                            </v-flex>
+                        </v-layout>
+                    </v-flex>
+                </v-layout>
+            </v-container>
 
-            </v-carousel-item>
-        </v-carousel>
+        </v-parallax>
     </main>
 </template>
 
@@ -58,25 +66,22 @@
     #carousel-view .fade-leave-to {
         opacity: 0;
     }
+    .review {
+        font-size: x-large;
+    }
     .card {
         box-shadow: none;
     }
     .avatar-name {
         font-size: large;
         color: white;
-    }
-
-    .avatar-image {
-        height: 150px;
-        width: 150px;
-        border-radius: 75px;
-
+        width: 200px;
     }
     .application--light .card, .application .theme--light.card {
         background-color: transparent;
     }
-    .avatar, .reviews {
-        z-index: 5;
+    .reviews {
+        padding-top: 10%;
     }
     .carousel-item{
         z-index: 2;
