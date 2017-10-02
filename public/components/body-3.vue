@@ -4,29 +4,33 @@
             <v-container float>
                 <v-layout row wrap class="reviews">
                     <v-flex xs12 offset-xs0 sm10 offset-sm1 md10 offset-md2>
-                        <v-layout row wrap>
-                            <v-flex xs12 sm5>
-                                <v-card>
-                                    <v-card-media height="150px"
-                                                  style="border-radius: 50%; width: 150px;"
-                                                  class="avatar-image"
-                                                  src="https://randomuser.me/api/portraits/men/1.jpg">
-                                    </v-card-media>
-                                    <br>
-                                    <v-card-title class="avatar-name">
-                                        Якийсь чувак
-                                    </v-card-title>
-                                </v-card>
-                            </v-flex>
-                            <v-flex xs12 sm7 >
-                                <v-card>
-                                    <br>
-                                    <v-card-title class="review white--text">
-                                        Тут я тіп оставив відгук, вобщем п!зд@та компашка пацани. Рекомендую!
-                                    </v-card-title>
-                                </v-card>
-                            </v-flex>
-                        </v-layout>
+                        <transition transition="slide-x-transition">
+                            <v-layout row wrap v-for="review in reviews" :key="review.name">
+                                <v-flex xs12 sm5>
+                                    <v-card >
+                                        <v-card-media height="150px"
+                                                      style="border-radius: 50%; width: 150px;"
+                                                      class="avatar-image"
+                                                      :src="review.photo">
+                                        </v-card-media>
+                                        <br>
+                                        <v-card-title class="avatar-name">
+                                            {{review.name}}
+                                        </v-card-title>
+                                    </v-card>
+                                </v-flex>
+                                <v-flex xs12 sm7 >
+                                    <v-card>
+                                        <br>
+                                        <v-card-title class="review white--text">
+                                            {{review.text}}
+                                        </v-card-title>
+                                        <v-btn v-on:click="nextReview">Next</v-btn>
+                                    </v-card>
+                                </v-flex>
+                            </v-layout>
+                        </transition>
+
                     </v-flex>
                 </v-layout>
             </v-container>
@@ -45,7 +49,36 @@
                     {
                         src: 'imgs/3.jpg'
                     }
-                ]
+                ],
+                item: 0,
+
+            }
+        },
+        mounted () {
+            this.$store.dispatch('reviews');
+        },
+
+        methods: {
+            getRandomNub(min, max) {
+                return Math.random() * (max - min)  + min;
+            },
+
+            nextReview() {
+                this.item = this.item + 1;
+            }
+        },
+
+        computed: {
+            reviews() {
+                const reviews = this.$store.getters.reviews;
+
+                return reviews.slice(this.item, this.item + 1)
+            },
+        },
+
+        watch: {
+            reviews (oldVal, val) {
+
             }
         }
     }
@@ -85,5 +118,19 @@
     }
     .carousel-item{
         z-index: 2;
+    }
+    .fade-transition-leave-active {
+        position: absolute;
+    }
+
+    .fade-transition-enter-active,
+    .fade-transition-leave,
+    .fade-transition-leave-to {
+        transition: primary-transition;
+    }
+
+    .fade-transition-enter,
+    .fade-transition-leave-to {
+        opacity: 0;
     }
 </style>
