@@ -4,10 +4,10 @@
             <v-container float>
                 <v-layout row wrap class="reviews">
                     <v-flex xs12 offset-xs0 sm10 offset-sm1 md10 offset-md2>
-                        <transition transition="slide-x-transition">
+                        <transition name="fade">
                             <v-layout row wrap v-for="review in reviews" :key="review.name">
                                 <v-flex xs12 sm5>
-                                    <v-card >
+                                    <v-card v-if="showReview" transition="slide-x-transition">
                                         <v-card-media height="150px"
                                                       style="border-radius: 50%; width: 150px;"
                                                       class="avatar-image"
@@ -20,7 +20,7 @@
                                     </v-card>
                                 </v-flex>
                                 <v-flex xs12 sm7 >
-                                    <v-card>
+                                    <v-card  v-if="showReview" transition="slide-x-transition">
                                         <br>
                                         <v-card-title class="review white--text">
                                             {{review.text}}
@@ -51,6 +51,7 @@
                     }
                 ],
                 item: 0,
+                showReview: true,
 
             }
         },
@@ -63,15 +64,21 @@
                 return Math.random() * (max - min)  + min;
             },
 
+            setVisible() {
+                this.showReview = !this.showReview
+            },
+
             nextReview() {
+                this.showReview = !this.showReview ;
                 this.item = this.item + 1;
+                setTimeout(this.setVisible, 500);
             }
         },
 
         computed: {
             reviews() {
                 const reviews = this.$store.getters.reviews;
-
+                if (this.item > reviews.length - 1) this.item = 0;
                 return reviews.slice(this.item, this.item + 1)
             },
         },
@@ -119,18 +126,12 @@
     .carousel-item{
         z-index: 2;
     }
-    .fade-transition-leave-active {
-        position: absolute;
-    }
+    .fade-enter-active, .fade-leave-active {
 
-    .fade-transition-enter-active,
-    .fade-transition-leave,
-    .fade-transition-leave-to {
-        transition: primary-transition;
+        transition: opacity .5s
     }
-
-    .fade-transition-enter,
-    .fade-transition-leave-to {
+    .fade-enter, .fade-leave-to, .fade-leave-active {
         opacity: 0;
+        transition: opacity .5s
     }
 </style>
