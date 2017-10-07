@@ -25,7 +25,7 @@
                                         class="grey lighten-4"
                                         v-for="teammate in teammates"
                                         :key="teammate.name"
-                                        style="cursor: pointer"
+                                        style="cursor: pointer; margin:10px"
                                         v-on:click="selectTeammate(teammate)"
                                 >
                                     <img :src="teammate.photo" alt="avatar">

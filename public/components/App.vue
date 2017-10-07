@@ -20,11 +20,11 @@
             </div>
         </v-flex>
 
-        <body-1></body-1>
-        <body-2></body-2>
-        <body-3></body-3>
-        <body-4></body-4>
-        <body-5></body-5>
+        <Home></Home>
+        <Works></Works>
+        <Reviews></Reviews>
+        <Teammates></Teammates>
+        <ContactUs></ContactUs>
         <my-footer></my-footer>
 
 
@@ -38,11 +38,11 @@
 
     import header from './header.vue'
     import stepper from './stepper.vue'
-    import body1 from './body-1.vue'
-    import body2 from './body-2.vue'
-    import body3 from './body-3.vue'
-    import body4 from './body-4.vue'
-    import body5 from './body-5.vue'
+    import Home from './Home.vue'
+    import Works from './Works.vue'
+    import Reviews from './Reviews.vue'
+    import Teammates from './Teammates.vue'
+    import ContactUs from './ContactUs.vue'
     import footer from './footer.vue'
 
     export default {
@@ -50,11 +50,11 @@
         components: {
             "my-header": header,
             "stepper": stepper,
-            "body-1": body1,
-            "body-2": body2,
-            "body-3": body3,
-            "body-4": body4,
-            "body-5": body5,
+            "Home": Home,
+            "Works": Works,
+            "Reviews": Reviews,
+            "Teammates": Teammates,
+            "ContactUs": ContactUs,
             "my-footer": footer,
         },
 
