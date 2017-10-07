@@ -9,6 +9,7 @@ export const store = new Vuex.Store({
     state: {
         someElem: undefined,
         reviews: [],
+        teammates: [],
     },
 
     getters: {
@@ -18,6 +19,10 @@ export const store = new Vuex.Store({
 
         reviews(state) {
             return state.reviews;
+        },
+
+        teammates(state) {
+            return state.teammates;
         }
     },
 
@@ -27,6 +32,10 @@ export const store = new Vuex.Store({
         },
 
         reviews(state, {type, value}) {
+            state[type] = value;
+        },
+
+        teammates(state, {type, value}) {
             state[type] = value;
         }
     },
@@ -63,6 +72,50 @@ export const store = new Vuex.Store({
             ];
 
             commit('reviews', {type: 'reviews', value: value})
+        },
+
+        teammates ({dispatch, commit}) {
+            const value = [
+                {
+                    name: "Oleksiy Fomin0",
+                    status: "FULL STACK mother fucker Developer",
+                    photo: "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-1/p160x160/11825179_1666774553541957_1366991187666773884_n.jpg?oh=0501a79951b88a59cdcad4017e0c418f&oe=5A7B2A0F",
+                    description: "Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin."
+                },
+                {
+                    name: "Oleksiy Fomin1",
+                    status: "FULL STACK mother fucker Developer",
+                    photo: "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-1/p160x160/11825179_1666774553541957_1366991187666773884_n.jpg?oh=0501a79951b88a59cdcad4017e0c418f&oe=5A7B2A0F",
+                    description: "Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin."
+                },
+                {
+                    name: "Oleksiy Fomin2",
+                    status: "FULL STACK mother fucker Developer",
+                    photo: "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-1/p160x160/11825179_1666774553541957_1366991187666773884_n.jpg?oh=0501a79951b88a59cdcad4017e0c418f&oe=5A7B2A0F",
+                    description: "Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin."
+                },
+                {
+                    name: "Oleksiy Fomin3",
+                    status: "FULL STACK mother fucker Developer",
+                    photo: "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-1/p160x160/11825179_1666774553541957_1366991187666773884_n.jpg?oh=0501a79951b88a59cdcad4017e0c418f&oe=5A7B2A0F",
+                    description: "Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin."
+                },
+                {
+                    name: "Oleksiy Fomin4",
+                    status: "FULL STACK mother fucker Developer",
+                    photo: "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-1/p160x160/11825179_1666774553541957_1366991187666773884_n.jpg?oh=0501a79951b88a59cdcad4017e0c418f&oe=5A7B2A0F",
+                    description: "Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin."
+                },
+                {
+                    name: "Oleksiy Fomin5",
+                    status: "FULL STACK mother fucker Developer",
+                    photo: "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-1/p160x160/11825179_1666774553541957_1366991187666773884_n.jpg?oh=0501a79951b88a59cdcad4017e0c418f&oe=5A7B2A0F",
+                    description: "Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin."
+                },
+
+            ];
+
+            commit('teammates', {type: 'teammates', value: value})
         },
 
         nextReview ({dispatch, commit}) {

@@ -4,10 +4,10 @@
             <v-container float>
                 <v-layout row wrap class="reviews">
                     <v-flex xs12 offset-xs0 sm10 offset-sm1 md10 offset-md2>
-                        <transition name="fade">
-                            <v-layout row wrap v-for="review in reviews" :key="review.name">
+                        <transition :duration="{ enter: 500, leave: 800 }" name="fade">
+                            <v-layout row wrap v-for="review in reviews" :key="review.name" v-if="showReview" transition="slide-x-transition">
                                 <v-flex xs12 sm5>
-                                    <v-card v-if="showReview" transition="slide-x-transition">
+                                    <v-card v-if="showReview">
                                         <v-card-media height="150px"
                                                       style="border-radius: 50%; width: 150px;"
                                                       class="avatar-image"
@@ -20,7 +20,7 @@
                                     </v-card>
                                 </v-flex>
                                 <v-flex xs12 sm7 >
-                                    <v-card  v-if="showReview" transition="slide-x-transition">
+                                    <v-card >
                                         <br>
                                         <v-card-title class="review white--text">
                                             {{review.text}}
@@ -34,7 +34,6 @@
                     </v-flex>
                 </v-layout>
             </v-container>
-
         </v-parallax>
     </main>
 </template>
@@ -65,13 +64,13 @@
             },
 
             setVisible() {
-                this.showReview = !this.showReview
+                this.showReview = !this.showReview;
             },
 
             nextReview() {
                 this.showReview = !this.showReview ;
                 this.item = this.item + 1;
-                setTimeout(this.setVisible, 500);
+                setTimeout(this.setVisible, 800);
             }
         },
 
@@ -108,6 +107,7 @@
     }
     .review {
         font-size: x-large;
+        word-wrap: normal;
     }
     .card {
         box-shadow: none;
@@ -127,11 +127,9 @@
         z-index: 2;
     }
     .fade-enter-active, .fade-leave-active {
-
         transition: opacity .5s
     }
-    .fade-enter, .fade-leave-to, .fade-leave-active {
-        opacity: 0;
-        transition: opacity .5s
+    .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+        opacity: 0
     }
 </style>
