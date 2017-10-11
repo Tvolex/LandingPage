@@ -23,6 +23,7 @@
     "path": "*",
     "serve-favicon": "*",
     "vue": "*",
+    "vue-awesome-swiper": "^2.6.7",
     "vue-gettext": "*",
     "vue-html-loader": "*",
     "vue-icon": "~1.1.6",

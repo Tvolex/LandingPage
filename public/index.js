@@ -1,9 +1,13 @@
+/* eslint-disable semi */
 //require modules
+require('swiper/dist/css/swiper.css')
+
 import "babel-core/register"
 import "babel-polyfill"
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Vuetify from 'vuetify'
+import VuewAwesomeSwiper from 'vue-awesome-swiper'
 import { store } from './store/store'
 
 // require components
@@ -48,6 +52,7 @@ const routes = [
 //Setup Vue
 Vue.use(VueRouter);
 Vue.use(Vuetify);
+Vue.use(VuewAwesomeSwiper);
 
 const router = new VueRouter({
     mode: 'history',

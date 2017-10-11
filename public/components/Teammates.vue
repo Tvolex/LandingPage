@@ -19,17 +19,21 @@
                     </v-flex>
                     <v-flex xs12 class="text-xs-center teammatesAvatarsLine">
                         <v-layout row no-wrap>
-                            <v-flex xs12 class="text-xs-center">
-                                <v-avatar
-                                        size="150"
-                                        class="grey lighten-4"
-                                        v-for="teammate in teammates"
-                                        :key="teammate.name"
-                                        style="cursor: pointer; margin:10px"
-                                        v-on:click="selectTeammate(teammate)"
-                                >
-                                    <img :src="teammate.photo" alt="avatar">
-                                </v-avatar>
+                            <v-flex xs1>
+                                <v-icon>keyboard_arrow_left</v-icon>
+                            </v-flex>
+                            <swiper :options="swiperOption">
+                                <swiper-slide  v-for="teammate in teammates" :key="teammate.name">
+                                    <v-avatar size="150" class="grey lighten-4"
+                                            style="cursor: pointer; margin:10px"
+                                            v-on:click="selectTeammate(teammate)">
+                                        <img :src="teammate.photo" alt="avatar">
+                                    </v-avatar>
+                                </swiper-slide>
+                                <div class="swiper-scrollbar" slot="scrollbar"></div>
+                            </swiper>
+                            <v-flex xs1>
+                                <v-icon>keyboard_arrow_right</v-icon>
                             </v-flex>
                         </v-layout>
                     </v-flex>
@@ -60,7 +64,6 @@
                         </v-layout>
                     </v-flex>
 
-
                 </v-layout>
             </v-container>
         </v-parallax>
@@ -69,11 +72,24 @@
 </template>
 
 <script>
+    import { swiper, swiperSlide } from 'vue-awesome-swiper'
     export default {
+        components: {
+            swiper,
+            swiperSlide
+        },
         name: 'body4',
         data() {
             return {
                 currentTeammate: null,
+                swiperOption: {
+                    scrollbar: '.swiper-scrollbar',
+                    scrollbarHide: true,
+                    slidesPerView: 'auto',
+                    centeredSlides: true,
+                    spaceBetween: 30,
+                    grabCursor: true
+                }
             }
         },
 
@@ -106,6 +122,12 @@
 </script>
 
 <style scoped>
+    .swiper-pagination {
+        margin-top: 5%;
+    }
+    .swiper-slide {
+        width: 250px;
+    }
     .currentTeammateAvatar {
         width: minmax(100px, 200px);
     }
@@ -117,5 +139,15 @@
         margin-top: 0;
         width: 100%;
         height: 100%;
+    }
+    .avatar .icon, .avatar img {
+        border-radius: 50%;
+        height: inherit;
+        width: 150px;
+    }
+    .avatar .icon, .avatar img {
+        border-radius: 50%;
+        height: inherit;
+        width: 150px;
     }
 </style>

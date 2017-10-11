@@ -80,39 +80,37 @@ export const store = new Vuex.Store({
                     name: "Oleksiy Fomin0",
                     status: "FULL STACK mother fucker Developer",
                     photo: "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-1/p160x160/11825179_1666774553541957_1366991187666773884_n.jpg?oh=0501a79951b88a59cdcad4017e0c418f&oe=5A7B2A0F",
-                    description: "Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin."
+                    description: "Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. " +
+                    "Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin."
                 },
                 {
-                    name: "Oleksiy Fomin1",
-                    status: "FULL STACK mother fucker Developer",
-                    photo: "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-1/p160x160/11825179_1666774553541957_1366991187666773884_n.jpg?oh=0501a79951b88a59cdcad4017e0c418f&oe=5A7B2A0F",
-                    description: "Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin."
+                    name: "Ivan Ferenchuk",
+                    status: "MAGIC mother fucker HTML&CSS Developer",
+                    photo: "./imgs/TeammatesPhotos/Ivan_Ferenchuk.jpg",
+                    description: "Some text about Ivan Ferenchuk. Some text about Ivan Ferenchuk. " +
+                    "Some text about Ivan Ferenchuk. Some text about Ivan Ferenchuk. Some text about Ivan Ferenchuk."
                 },
                 {
-                    name: "Oleksiy Fomin2",
+                    name: "Petro Shved",
                     status: "FULL STACK mother fucker Developer",
-                    photo: "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-1/p160x160/11825179_1666774553541957_1366991187666773884_n.jpg?oh=0501a79951b88a59cdcad4017e0c418f&oe=5A7B2A0F",
-                    description: "Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin."
+                    photo: "./imgs/TeammatesPhotos/Petro_Shved.jpg",
+                    description: "Some text about Petro Shved. Some text about Petro Shved." +
+                    " Some text about Petro Shved. Some text about Petro_Shved. Some text about Petro Shved."
                 },
                 {
-                    name: "Oleksiy Fomin3",
-                    status: "FULL STACK mother fucker Developer",
-                    photo: "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-1/p160x160/11825179_1666774553541957_1366991187666773884_n.jpg?oh=0501a79951b88a59cdcad4017e0c418f&oe=5A7B2A0F",
-                    description: "Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin."
+                    name: "Vasya Tysyanchyn",
+                    status: "NOT FULL STACK mother fucker Developer",
+                    photo: "./imgs/TeammatesPhotos/Vasya_Tysyanchyn.jpg",
+                    description: "Some text about Vasya Tysyanchyn. Some text about Vasya Tysyanchyn." +
+                    " Some text about Vasya Tysyanchyn. Some text about Vasya Tysyanchyn. Some text about Vasya Tysyanchyn."
                 },
                 {
-                    name: "Oleksiy Fomin4",
+                    name: "Yaroslav Fedyshyn",
                     status: "FULL STACK mother fucker Developer",
-                    photo: "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-1/p160x160/11825179_1666774553541957_1366991187666773884_n.jpg?oh=0501a79951b88a59cdcad4017e0c418f&oe=5A7B2A0F",
-                    description: "Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin."
+                    photo: "./imgs/TeammatesPhotos/Yaroslav_Fedyshyn.jpg",
+                    description: "Some text about Yaroslav Fedyshyn. Some text about Yaroslav Fedyshyn." +
+                    " Some text about Yaroslav Fedyshyn. Some text about Yaroslav Fedyshyn. Some text about Yaroslav Fedyshyn."
                 },
-                {
-                    name: "Oleksiy Fomin5",
-                    status: "FULL STACK mother fucker Developer",
-                    photo: "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-1/p160x160/11825179_1666774553541957_1366991187666773884_n.jpg?oh=0501a79951b88a59cdcad4017e0c418f&oe=5A7B2A0F",
-                    description: "Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin."
-                },
-
             ];
 
             commit('teammates', {type: 'teammates', value: value})
