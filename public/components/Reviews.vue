@@ -5,41 +5,36 @@
                 <v-layout row wrap class="reviews">
                     <v-flex xs12 offset-xs0 sm10 offset-sm1 md10 offset-md2>
                         <transition :duration="{ enter: 500, leave: 800 }" name="fade">
-                            <v-layout row wrap v-for="review in reviews" :key="review.name" v-if="showReview" transition="slide-x-transition">
-                                <v-flex xs12 sm5>
-                                    <v-card v-if="showReview">
-                                        <v-card-media height="150px"
-                                                      style="border-radius: 50%; width: 150px;"
-                                                      class="avatar-image"
-                                                      :src="review.photo">
-                                        </v-card-media>
-                                        <br>
-                                        <v-card-title class="avatar-name">
-                                            {{review.name}}
-                                        </v-card-title>
-                                    </v-card>
-                                </v-flex>
-                                <v-flex xs12 sm7 >
-                                    <v-card >
-                                        <br>
-                                        <v-card-title class="review white--text">
-                                            {{review.text}}
-                                        </v-card-title>
-                                        <v-btn v-on:click="nextReview">Next</v-btn>
-                                    </v-card>
-                                </v-flex>
-                            </v-layout>
+                            <swiper :options="swiperOption">
+                                <swiper-slide v-for="item in reviews" :key="item.name">
+                                    <v-layout row wrap>
+                                        <v-flex xs12 sm5 offset-xs1>
+                                            <v-avatar size="200"  class="grey lighten-4">
+                                                <img :src="item.photo" width="150px" class="" alt="avatar">
+                                            </v-avatar>
+                                            <v-card-title class="avatar-name">
+                                            {{item.name}}
+                                            </v-card-title>
+                                        </v-flex>
+                                        <v-flex xs12 sm6>
+                                            <v-card-title>
+                                                {{item.text}}
+                                            </v-card-title>
+                                        </v-flex>
+                                    </v-layout>
+                                </swiper-slide>
+                                <div class="swiper-pagination" slot="pagination"></div>
+                                <div class="swiper-button-prev"  slot="button-prev"></div>
+                                <div class="swiper-button-next" slot="button-next"></div>
+                            </swiper>
                         </transition>
-
                     </v-flex>
                 </v-layout>
             </v-container>
         </v-parallax>
     </main>
 </template>
-
 <script>
-
     export default {
         name: 'body-3',
         data() {
@@ -51,7 +46,13 @@
                 ],
                 item: 0,
                 showReview: true,
-
+                swiperOption: {
+                    pagination: '.swiper-pagination',
+                    paginationClickable: true,
+                    nextButton: '.swiper-button-next',
+                    prevButton: '.swiper-button-prev',
+                    spaceBetween: 30
+                }
             }
         },
         mounted () {
@@ -76,9 +77,7 @@
 
         computed: {
             reviews() {
-                const reviews = this.$store.getters.reviews;
-                if (this.item > reviews.length - 1) this.item = 0;
-                return reviews.slice(this.item, this.item + 1)
+                return  this.$store.getters.reviews;
             },
         },
 
@@ -91,6 +90,10 @@
 </script>
 
 <style scoped>
+    .avatar .icon, .avatar img {
+        width: 150px;
+        height: 150px;
+    }
     #carousel-view .fade-enter-active,
     #carousel-view .fade-leave-active,
     #carousel-view .fade-leave-to {

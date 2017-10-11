@@ -72,12 +72,9 @@
 </template>
 
 <script>
-    import { swiper, swiperSlide } from 'vue-awesome-swiper'
+
     export default {
-        components: {
-            swiper,
-            swiperSlide
-        },
+
         name: 'body4',
         data() {
             return {

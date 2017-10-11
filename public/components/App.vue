@@ -35,7 +35,7 @@
 <script >
     //import 'animate.css'
     import 'vuetify/dist/vuetify.min.css'
-
+    import { swiper, swiperSlide } from 'vue-awesome-swiper'
     import header from './header.vue'
     import stepper from './stepper.vue'
     import Home from './Home.vue'
@@ -56,6 +56,8 @@
             "Teammates": Teammates,
             "ContactUs": ContactUs,
             "my-footer": footer,
+            "swiper": swiper,
+            "swiper-slide": swiperSlide,
         },
 
         name: 'main',
