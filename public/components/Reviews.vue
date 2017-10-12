@@ -89,31 +89,15 @@
     }
 </script>
 
-<style scoped>
+<style >
     .avatar .icon, .avatar img {
         width: 150px;
         height: 150px;
     }
-    #carousel-view .fade-enter-active,
-    #carousel-view .fade-leave-active,
-    #carousel-view .fade-leave-to {
-        transition: 0.3s ease-out;
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
 
-    #carousel-view .fade-enter,
-    #carousel-view .fade-leave,
-    #carousel-view .fade-leave-to {
-        opacity: 0;
-    }
     .review {
         font-size: x-large;
         word-wrap: normal;
-    }
-    .card {
-        box-shadow: none;
     }
     .avatar-name {
         font-size: large;
@@ -126,13 +110,8 @@
     .reviews {
         padding-top: 10%;
     }
-    .carousel-item{
-        z-index: 2;
-    }
-    .fade-enter-active, .fade-leave-active {
-        transition: opacity .5s
-    }
-    .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-        opacity: 0
+
+    .swiper-pagination-bullet {
+        background-color: white;
     }
 </style>
