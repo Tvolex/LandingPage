@@ -41,7 +41,7 @@
                         <v-layout row>
                             <v-flex xs12 md8 offset-md2>
                                 <v-layout row wrap>
-                                    <v-flex xs12 md4>
+                                    <v-flex xs12 md4 hidden-xs-only>
                                         <v-avatar
                                                 size="200"
                                                 class="grey lighten-4 currentTeammateAvatar"
