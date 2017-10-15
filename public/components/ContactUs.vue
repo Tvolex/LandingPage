@@ -32,7 +32,7 @@
                         <div style="font-size: 20px; font-family: 'Didot', sans-serif" align="right">ADRESS</div>
                         <img align="right" src="../imgs/trik.png">
                         <br><br>
-                        <div style="font-size: 12px; font-family: 'Myriad Pro', sans-serif;" align="right">795 Folsom Ave, Suite 600</div>
+                        <div style="font-size: 12px; font-family: 'Myriad Pro', sans-serif;" align="right">795 Folsom Ave, Suite 600 </div>
                         <div style="font-size: 12px; font-family: 'Myriad Pro', sans-serif;" align="right">San Francisco, CA94107</div>
                     </v-flex>
                 </v-layout>
