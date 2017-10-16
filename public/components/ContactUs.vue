@@ -2,7 +2,7 @@
     <v-parallax src="imgs/img5.jpg" id="Contact">
             <v-container float>
                 <v-layout row wrap>
-                    <v-flex xs12 sm8 offset-sm2 md6 offset-md3 style="margin-top: 64px">
+                    <v-flex xs12 offset-xs0 sm10 offset-sm1 md6 offset-md3 style="margin-top: 5vh">
                         <div style="font-size: 200%; font-family: 'Didot', sans-serif" align="center">Want to work with us?</div>
                     </v-flex>
                     <v-flex xs12 sm8 offset-sm2 md6 offset-md3>
@@ -18,21 +18,19 @@
                             <div style="font-size: 12px; font-family: 'Myriad Pro', sans-serif;" align="left">The last Wordpress theme</div>
                             <div style="font-size: 12px; font-family: 'Myriad Pro', sans-serif;" align="left"> you will ever need</div>
                         </div>
-
+                        <br>
                     </v-flex>
                     <v-flex xs12 sm4 >
                         <div style="font-size: 20px; font-family: 'Didot', sans-serif" :align="SM">SOCIAL MEDIA</div>
                         <div :align="SM">
                             <img  src="../imgs/trik.png" >
                         </div>
-
-
                         <div class="retreat" :align="SM">
                             <img style="margin-left: 0px; cursor: pointer" src="../imgs/fab.png"/>
                             <img style="margin-left:  40px; cursor: pointer" src="../imgs/twit.png"/>
                             <img style="margin-left: 30px; cursor: pointer" src="../imgs/skp.png"/>
                         </div>
-
+                        <br>
                     </v-flex>
                     <v-flex xs12 sm4 >
                         <div style="font-size: 20px; font-family: 'Didot', sans-serif" :align="ADRSS">ADRESS</div>
@@ -42,7 +40,6 @@
                             <div style="font-size: 12px; font-family: 'Myriad Pro', sans-serif;" >795 Folsom Ave</div>
                             <div style="font-size: 12px; font-family: 'Myriad Pro', sans-serif;" >Suite 600 San Francisco, CA94107</div>
                         </div>
-
                     </v-flex>
                 </v-layout>
             </v-container>
@@ -89,9 +86,9 @@
         filter: brightness(40%);
     }
     .contactUsInfo {
-        margin-top: 5%;
-        margin-left: 20%;
-        width: 60%;
+        margin-top: 8vw;
+        margin-left: 10%;
+        width: 80%;
         /*background-color: wheat;*/
     }
     hr {
