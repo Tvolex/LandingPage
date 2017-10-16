@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <main id="Team">
         <v-parallax src="imgs/4.jpg" height="700">
             <v-container float>
                 <v-layout row wrap class="team">
@@ -75,7 +75,7 @@
 
     export default {
 
-        name: 'body4',
+        name: 'Team',
         data() {
             return {
                 currentTeammate: null,

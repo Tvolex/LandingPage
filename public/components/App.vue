@@ -1,5 +1,5 @@
 <template>
-    <v-app id="app">
+    <v-app id="app" onresize="mobile">
         <my-header></my-header>
         <v-flex xs1 offset-xs11 lg1 offset-lg11>
             <div class="stepper">
@@ -117,10 +117,25 @@
             }
         },
 
+
+        created(){
+            const updateMobile = () => { this.$store.dispatch('mobile') };
+
+            updateMobile();
+
+            window.addEventListener('resize', function () {
+                updateMobile();
+            });
+
+
+        },
+
         methods: {
             asd() {
                 this.$router.push("#contact_us")
             },
+
+
         },
     }
 </script>

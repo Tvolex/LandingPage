@@ -29,6 +29,7 @@
     "vue-icon": "~1.1.6",
     "vue-resize-directive": "~1.0.0",
     "vue-router": "*",
+    "vue-scrollto": "^2.7.8",
     "vue-style-loader": "*",
     "vue-template-compiler": "*",
     "vuetify": "^0.15.7",

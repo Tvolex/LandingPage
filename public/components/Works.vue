@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <main id="Works">
         <v-container float>
             <v-layout row wrap>
                 <!--<div class="portfolioSection">-->
@@ -43,7 +43,7 @@
 
 <script>
     export default {
-        name: 'body-2',
+        name: 'Works',
         data() {
             return {
                 items: [

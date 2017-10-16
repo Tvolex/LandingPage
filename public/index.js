@@ -7,7 +7,8 @@ import "babel-polyfill"
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Vuetify from 'vuetify'
-import VuewAwesomeSwiper from 'vue-awesome-swiper'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import scrollTo from 'vue-scrollto'
 import { store } from './store/store'
 
 // require components
@@ -49,10 +50,12 @@ const routes = [
 ];
 
 
+
 //Setup Vue
-Vue.use(VueRouter);
 Vue.use(Vuetify);
-Vue.use(VuewAwesomeSwiper);
+Vue.use(VueRouter);
+Vue.use(VueAwesomeSwiper);
+Vue.use(scrollTo);
 
 const router = new VueRouter({
     mode: 'history',

@@ -1,10 +1,10 @@
 <template>
-    <img class="img"  src="imgs/1.jpg" alt="a">
+    <img class="img"  src="imgs/1.jpg" alt="a" id="Home">
 </template>
 
 <script>
     export default {
-        name: 'body1',
+        name: 'Home',
         data() {
             return {
 

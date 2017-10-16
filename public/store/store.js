@@ -10,6 +10,7 @@ export const store = new Vuex.Store({
         someElem: undefined,
         reviews: [],
         teammates: [],
+        mobile: false,
     },
 
     getters: {
@@ -23,6 +24,10 @@ export const store = new Vuex.Store({
 
         teammates(state) {
             return state.teammates;
+        },
+
+        mobile(state) {
+            return state.mobile;
         }
     },
 
@@ -37,10 +42,20 @@ export const store = new Vuex.Store({
 
         teammates(state, {type, value}) {
             state[type] = value;
+        },
+
+        mobile(state, {type, value}) {
+            state[type] = value;
         }
     },
 
     actions: {
+        mobile({dispatch, commit}) {
+            let mobile = document.body.clientWidth < 600;
+
+            commit('mobile', {type: 'mobile', value: mobile});
+        },
+
         elems({state, dispatch, commit}){
             const ValueOfSomeElem = null;
 

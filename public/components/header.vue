@@ -27,7 +27,7 @@
             <v-spacer></v-spacer>
 
             <v-toolbar-items>
-                <router-link tag="v-btn" class="btn btn--flat" to="/" style="font-size: larger">APT</router-link>
+                <router-link tag="v-btn" class="btn btn--flat" to="/" style="font-size: larger" >APT</router-link>
             </v-toolbar-items>
 
             <v-spacer></v-spacer>
@@ -37,8 +37,10 @@
                         tag="v-btn"
                         v-for="item in items"
                         class="btn btn--flat"
-                        :to="item.link"
-                        :key="item.text">
+                        to="/"
+                        :key="item.text"
+                        v-on:click.native="scroll(item.link)"
+                >
                     {{ item.text }}
                 </router-link>
             </v-toolbar-items>
@@ -63,13 +65,19 @@
                 sideNav: false,
                 items: [
                     {text: 'Home', link: "#Home"},
-                    {text: 'Skills', link: "#Skills"},
-                    {text: 'Portfolio', link: "#Portfolio"},
+                    {text: 'Skills', link: "#Works"},
+                    {text: 'Reviews', link: "#Reviews"},
                     {text: "Team", link: "#Team"},
                     {text: "Contact", link: "#Contact"},
                 ],
             }
-        }
+        },
+
+        methods: {
+            scroll(item) {
+                this.$scrollTo(item, 500, {y: true});
+            }
+        },
     }
 </script>
 

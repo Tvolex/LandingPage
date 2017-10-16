@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <main id="Reviews">
         <v-parallax src="imgs/3.jpg" jumbotron>
             <v-container float>
                 <v-layout row wrap class="reviews">
@@ -36,7 +36,7 @@
 </template>
 <script>
     export default {
-        name: 'body-3',
+        name: 'Reviews',
         data() {
             return {
                 items: [
