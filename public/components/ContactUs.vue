@@ -3,10 +3,10 @@
             <v-container float>
                 <v-layout row wrap>
                     <v-flex xs12 offset-xs0 sm10 offset-sm1 md6 offset-md3 style="margin-top: 5vh">
-                        <div style="font-size: 200%; font-family: 'Didot', sans-serif" align="center">Want to work with us?</div>
+                        <div style="font-size: 30px; font-family: 'Didot', sans-serif" align="center">Want to work with us?</div>
                     </v-flex>
                     <v-flex xs12 sm8 offset-sm2 md6 offset-md3>
-                        <div style="font-size: 30px; font-family: 'Times New Roman', sans-serif; " align="center">contactus@apt.com</div>
+                        <div style="font-size: 25px; font-family: 'Times New Roman', sans-serif; " align="center">contactus@apt.com</div>
                         <hr style="width: 15%; margin-left: 42.5%;">
                     </v-flex>
                 </v-layout>
@@ -15,13 +15,13 @@
                         <div style="font-size: 20px; font-family: 'Didot', sans-serif" align="left">ATP</div>
                         <img src="../imgs/trik.png">
                         <div class="retreat">
-                            <div style="font-size: 12px; font-family: 'Myriad Pro', sans-serif;" align="left">The last Wordpress theme</div>
-                            <div style="font-size: 12px; font-family: 'Myriad Pro', sans-serif;" align="left"> you will ever need</div>
+                            <div  align="left">The last Wordpress theme</div>
+                            <div  align="left"> you will ever need</div>
                         </div>
                         <br>
                     </v-flex>
                     <v-flex xs12 sm4 >
-                        <div style="font-size: 20px; font-family: 'Didot', sans-serif" :align="SM">SOCIAL MEDIA</div>
+                        <div style="font-size: 18px; font-family: 'Didot', sans-serif" :align="SM">SOCIAL MEDIA</div>
                         <div :align="SM">
                             <img  src="../imgs/trik.png" >
                         </div>
@@ -33,12 +33,12 @@
                         <br>
                     </v-flex>
                     <v-flex xs12 sm4 >
-                        <div style="font-size: 20px; font-family: 'Didot', sans-serif" :align="ADRSS">ADRESS</div>
+                        <div  style="font-size: 18px; font-family: 'Didot', sans-serif" :align="ADRSS">ADRESS</div>
                         <img  src="../imgs/trik.png" :align="ADRSS">
                         <br>
                         <div class="retreat" :align="ADRSS">
-                            <div style="font-size: 12px; font-family: 'Myriad Pro', sans-serif;" >795 Folsom Ave</div>
-                            <div style="font-size: 12px; font-family: 'Myriad Pro', sans-serif;" >Suite 600 San Francisco, CA94107</div>
+                            <div  >795 Folsom Ave</div>
+                            <div >Suite 600 San Francisco, CA94107</div>
                         </div>
                     </v-flex>
                 </v-layout>
@@ -86,6 +86,8 @@
         filter: brightness(40%);
     }
     .contactUsInfo {
+        font-size: 12px;
+        font-family: 'Myriad Pro', sans-serif;
         margin-top: 8vw;
         margin-left: 10%;
         width: 80%;
