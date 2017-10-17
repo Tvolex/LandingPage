@@ -3,7 +3,7 @@
             <v-container float>
                 <v-layout row wrap>
                     <v-flex xs12 offset-xs0 sm10 offset-sm1 md6 offset-md3 style="margin-top: 5vh">
-                        <div style="font-size: 30px; font-family: 'Didot', sans-serif" align="center">Want to work with us?</div>
+                        <div style="font-size: 28px; font-family: 'Didot', sans-serif" align="center">Want to work with us?</div>
                     </v-flex>
                     <v-flex xs12 sm8 offset-sm2 md6 offset-md3>
                         <div style="font-size: 25px; font-family: 'Times New Roman', sans-serif; " align="center">contactus@apt.com</div>
