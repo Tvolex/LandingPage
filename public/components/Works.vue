@@ -20,7 +20,7 @@
                     </v-layout>
                     <v-layout row wrap>
                         <v-flex xs12 sm6 md4 lg3  v-for="item in items" :key="item._id">
-                            <v-card>
+                            <v-card style="cursor:pointer;">
                                 <v-card-media :src="item.src" height="200px"></v-card-media>
                                 <div class="workBlockText">Lorem ipsum dolor sit amet.</div>
                             </v-card>

@@ -129,9 +129,9 @@ export const store = new Vuex.Store({
                 {
                     name: "Kristopher Shultz",
                     status: "PR mother fucker Manager",
-                    photo: "\"https://instagram.fiev2-1.fna.fbcdn.net/t51.2885-15/e35/22280058_1667560616622618_1183093357803470848_n.jpg\"",
-                    description: "Some text about \"Kristopher Shultz. Some text about \"Kristopher Shultz." +
-                    " Some text about \"Kristopher Shultz. Some text about \"Kristopher Shultz. Some text about \"Kristopher Shultz."
+                    photo: "https://instagram.fiev2-1.fna.fbcdn.net/t51.2885-15/e35/22280058_1667560616622618_1183093357803470848_n.jpg",
+                    description: "Some text about Kristopher Shultz. Some text about Kristopher Shultz." +
+                    " Some text about Kristopher Shultz. Some text about Kristopher Shultz. Some text about Kristopher Shultz."
                 }
             ];
 
