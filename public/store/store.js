@@ -92,11 +92,11 @@ export const store = new Vuex.Store({
         teammates ({dispatch, commit}) {
             const value = [
                 {
-                    name: "Oleksiy Fomin0",
+                    name: "Oleksiy Fomin",
                     status: "FULL STACK mother fucker Developer",
                     photo: "https://scontent-frx5-1.xx.fbcdn.net/v/t1.0-1/p160x160/11825179_1666774553541957_1366991187666773884_n.jpg?oh=0501a79951b88a59cdcad4017e0c418f&oe=5A7B2A0F",
-                    description: "Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. " +
-                    "Some text about Oleksiy Fomin. Some text about Oleksiy Fomin. Some text about Oleksiy Fomin."
+                    description: "Oleksiy Fomin is one of the co-founders and good friend who will always consult and help without any problems. " +
+                    "The main manager of the company who manages all projects. Features: knowledge of Java, PHP, Node.js and Ruby"
                 },
                 {
                     name: "Ivan Ferenchuk",
@@ -109,15 +109,15 @@ export const store = new Vuex.Store({
                     name: "Petro Shved",
                     status: "FULL STACK mother fucker Developer",
                     photo: "./imgs/TeammatesPhotos/Petro_Shved.jpg",
-                    description: "Some text about Petro Shved. Some text about Petro Shved." +
-                    " Some text about Petro Shved. Some text about Petro_Shved. Some text about Petro Shved."
+                    description: "Peter Shved is a good programmer and positive person who works well with other staff. Features: Java, Node.js and PHP"
                 },
                 {
                     name: "Vasya Tysyanchyn",
                     status: "NOT FULL STACK mother fucker Developer",
                     photo: "./imgs/TeammatesPhotos/Vasya_Tysyanchyn.jpg",
-                    description: "Some text about Vasya Tysyanchyn. Some text about Vasya Tysyanchyn." +
-                    " Some text about Vasya Tysyanchyn. Some text about Vasya Tysyanchyn. Some text about Vasya Tysyanchyn."
+                    description: "Having graduated alongside Chris Harvard, Vasili met with him to move from the bottom of the company. " +
+                    "Bacause of his hard work in them it went very well and the company rose only a year and found an investor in Dubai, " +
+                    "thanks to Vasily and his friend. Ideally knows with Java and Practicing Node.js. In his free time engaged in professional motocross."
                 },
                 {
                     name: "Yaroslav Fedyshyn",
@@ -130,8 +130,8 @@ export const store = new Vuex.Store({
                     name: "Kristopher Shultz",
                     status: "PR mother fucker Manager",
                     photo: "https://instagram.fiev2-1.fna.fbcdn.net/t51.2885-15/e35/22280058_1667560616622618_1183093357803470848_n.jpg",
-                    description: "Some text about Kristopher Shultz. Some text about Kristopher Shultz." +
-                    " Some text about Kristopher Shultz. Some text about Kristopher Shultz. Some text about Kristopher Shultz."
+                    description: "After graduating Oxford went with friend Vasily to make a company where the one who wrote on the Python." +
+                    " Perfectly knows with C++ and Java. Helps in promoting the company."
                 }
             ];
 

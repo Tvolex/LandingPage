@@ -10,10 +10,8 @@
                             </v-flex>
                         </v-layout>
                         <v-layout>
-                            <v-flex xs12 md8 offset-md2 class="text-xs-center" style="filter: brightness(100%); z-index:5">
-                                Some text about our team. Some text about our team. Some text about our team. Some text about our team
-                                Some text about our team. Some text about our team. Some text about our team. Some text about our team
-                                Some text about our team. Some text about our team. Some text about our team. Some text about our team
+                            <v-flex xs12 md10 offset-md1 class="text-xs-center" style="filter: brightness(100%); z-index:5">
+                                One of the beast teams of not better in Ukraine. Very well-developed specialists who make all goals in an incredibly short time.
                             </v-flex>
                         </v-layout>
                     </v-flex>
@@ -50,10 +48,10 @@
                                         </v-avatar>
                                     </v-flex>
                                     <v-flex xs12 md6>
-                                        <span>{{currentTeammate.name}}</span><br>
-                                        <span>{{currentTeammate.status}}</span><br>
+                                        <div style="font-size: 23px">{{currentTeammate.name}}</div><br>
+                                        <div style="font-size: 18px">{{currentTeammate.status}}</div><br>
                                         <v-layout row wrap>
-                                            <v-flex xs12>
+                                            <v-flex xs12 style="font-size: 15px">
                                                 {{currentTeammate.description}}
                                             </v-flex>
                                         </v-layout>
@@ -137,12 +135,7 @@
     }
     .avatar .icon, .avatar img {
         border-radius: 50%;
-        height: inherit;
-        width: 150px;
-    }
-    .avatar .icon, .avatar img {
-        border-radius: 50%;
-        height: inherit;
+        height: 150px;
         width: 150px;
     }
 </style>

@@ -2,7 +2,7 @@
     <v-parallax src="imgs/footer.jpg" height="90">
         <v-container fluid>
             <v-layout row wrap>
-                <v-flex xs6 offset-xs3>
+                <v-flex xs10 offset-xs1>
                     <div align="center">Copyright {{currentYear}} <span style="color: blue">APT</span>| All Rights Reserved</div>
                 </v-flex>
             </v-layout>
