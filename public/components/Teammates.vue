@@ -11,7 +11,7 @@
                         </v-layout>
                         <v-layout>
                             <v-flex xs12 md10 offset-md1 class="text-xs-center" style="filter: brightness(100%); z-index:5">
-                                One of the beast teams of not better in Ukraine. Very well-developed specialists who make all goals in an incredibly short time.
+                                One of the best teams if not better in Ukraine. Very well-developed specialists who make all goals in an incredibly short time
                             </v-flex>
                         </v-layout>
                     </v-flex>
