@@ -9,6 +9,7 @@ import VueRouter from 'vue-router'
 import Vuetify from 'vuetify'
 import VueAwesomeSwiper from 'vue-awesome-swiper'
 import scrollTo from 'vue-scrollto'
+import ScrollActive from 'vue-scrollactive'
 import { store } from './store/store'
 
 // require components
@@ -56,6 +57,7 @@ Vue.use(Vuetify);
 Vue.use(VueRouter);
 Vue.use(VueAwesomeSwiper);
 Vue.use(scrollTo);
+Vue.use(ScrollActive);
 
 const router = new VueRouter({
     mode: 'history',

@@ -49,6 +49,7 @@
     "vue-hot-loader": "*",
     "vue-hot-reload-api": "*",
     "vue-loader": "*",
+    "vue-scrollactive": "^0.4.6",
     "vue-template-compiler": "*",
     "webpack": "*"
   },

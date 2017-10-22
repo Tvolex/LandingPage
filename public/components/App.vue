@@ -5,15 +5,17 @@
             <div class="stepper">
 
                 <div class="card-nav">
+                    <scrollactive ref="scrollactive" :offset="200">
+                        <ul class="nav-center">
+                            <li><a href="#Home" class="scrollactive-item nav-item">Home</a></li>
+                            <li><a href="#Works" class="scrollactive-item nav-item">Works</a></li>
+                            <li><a href="#Reviews" class="scrollactive-item nav-item">Reviews</a></li>
+                            <li><a href="#Team" class="scrollactive-item nav-item">Team</a></li>
+                            <li><a href="#Contact" class="scrollactive-item nav-item">Contact</a></li>
 
-                    <ul>
-                        <li><span>Home</span></li> <div class="circle"></div><br>
-                        <li><span>Skills</span></li> <div class="circle"></div><br>
-                        <li><span>Portfolio</span></li> <div class="circle"></div><br>
-                        <li><span>Team</span></li> <div class="circle"></div><br>
-                        <li v-on:click="asd" ><router-link to="#contact_us"> <span>Contact</span></router-link></li> <div class="circle"></div><br>
+                        </ul>
+                    </scrollactive>
 
-                    </ul><div class="vertLine"></div>
                 </div>
 
 
@@ -131,9 +133,6 @@
         },
 
         methods: {
-            asd() {
-                this.$router.push("#contact_us")
-            },
 
 
         },
@@ -141,7 +140,12 @@
 </script>
 
 <style lang="scss">
-
+    .nav-item {
+        color: #7a7a7a;
+    }
+    .is-active {
+        color: #00d1b2;
+    }
     .application--light {
         background-color:white; //rgb(238, 238, 240);
     }
