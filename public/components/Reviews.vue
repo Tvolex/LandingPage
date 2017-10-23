@@ -4,30 +4,26 @@
             <v-container float>
                 <v-layout row wrap class="reviews">
                     <v-flex xs12 offset-xs0 sm10 offset-sm1 md10 offset-md2>
-                        <transition :duration="{ enter: 500, leave: 800 }" name="fade">
-                            <swiper :options="swiperOption">
-                                <swiper-slide v-for="item in reviews" :key="item.name">
-                                    <v-layout row wrap>
-                                        <v-flex xs12 sm5 offset-xs1>
-                                            <v-avatar size="200"  class="grey lighten-4">
-                                                <img :src="item.photo" width="150px" class="" alt="avatar">
-                                            </v-avatar>
-                                            <v-card-title class="avatar-name">
+                        <swiper :options="swiperOption">
+                            <swiper-slide v-for="item in reviews" :key="item.name" data-swiper-autoplay="3000">
+                                <v-layout row wrap>
+                                    <v-flex xs12 sm5 offset-xs1>
+                                        <v-avatar size="200"  class="grey lighten-4">
+                                            <img :src="item.photo" width="150px" class="" alt="avatar">
+                                        </v-avatar>
+                                        <v-card-title class="avatar-name">
                                             {{item.name}}
-                                            </v-card-title>
-                                        </v-flex>
-                                        <v-flex xs12 sm6>
-                                            <v-card-title>
-                                                {{item.text}}
-                                            </v-card-title>
-                                        </v-flex>
-                                    </v-layout>
-                                </swiper-slide>
-                                <div class="swiper-pagination" slot="pagination"></div>
-                                <div class="swiper-button-prev"  slot="button-prev"></div>
-                                <div class="swiper-button-next" slot="button-next"></div>
-                            </swiper>
-                        </transition>
+                                        </v-card-title>
+                                    </v-flex>
+                                    <v-flex xs12 sm6>
+                                        <v-card-title>
+                                            {{item.text}}
+                                        </v-card-title>
+                                    </v-flex>
+                                </v-layout>
+                            </swiper-slide>
+                            <div class="swiper-pagination" slot="pagination"></div>
+                        </swiper>
                     </v-flex>
                 </v-layout>
             </v-container>
@@ -51,7 +47,10 @@
                     paginationClickable: true,
                     nextButton: '.swiper-button-next',
                     prevButton: '.swiper-button-prev',
-                    spaceBetween: 30
+                    spaceBetween: 30,
+                    autoplay: true,
+                    speed: 1000,
+                    iOSEdgeSwipeDetection: true,
                 }
             }
         },
