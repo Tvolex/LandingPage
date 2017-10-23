@@ -5,14 +5,14 @@
             <div class="stepper">
 
                 <div class="card-nav">
-                    <scrollactive ref="scrollactive" :offset="200">
+                    <scrollactive ref="scrollactive" :offset="120">
                         <ul class="nav-center">
-                            <li><a href="#Home" class="scrollactive-item nav-item">Home</a></li>
-                            <li><a href="#Works" class="scrollactive-item nav-item">Works</a></li>
-                            <li><a href="#Reviews" class="scrollactive-item nav-item">Reviews</a></li>
-                            <li><a href="#Team" class="scrollactive-item nav-item">Team</a></li>
-                            <li><a href="#Contact" class="scrollactive-item nav-item">Contact</a></li>
-
+                            <li class="nav-item"><a href="#Home" class="scrollactive-item nav-item">Home<div class="circle"></div></a></li>
+                            <li class="nav-item"><a href="#Works" class="scrollactive-item nav-item">Works<div class="circle"></div></a></li>
+                            <li class="nav-item"><a href="#Reviews" class="scrollactive-item nav-item">Reviews<div class="circle"></div></a></li>
+                            <li class="nav-item"><a href="#Team" class="scrollactive-item nav-item">Team<div class="circle"></div></a></li>
+                            <li class="nav-item"><a href="#Contact" class="scrollactive-item nav-item">Contact<div class="circle"></div></a></li>
+                            <div class="vertLine"></div>
                         </ul>
                     </scrollactive>
 
@@ -140,11 +140,25 @@
 </script>
 
 <style lang="scss">
+    .nav-center {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        text-align: -webkit-center;
+    }
+
+    .nav-center li {
+        margin-top: 40px;
+    }
     .nav-item {
-        color: #7a7a7a;
+        color: rgb(200, 200, 200);
+        text-decoration: none;
+    },
+    .is-active div {
+        background-color:  rgb(75, 80, 90);
     }
     .is-active {
-        color: #00d1b2;
+        color: rgb(75, 80, 90);
     }
     .application--light {
         background-color:white; //rgb(238, 238, 240);
@@ -155,28 +169,29 @@
     }
     .card-nav {
         padding: 0;
-        margin: 0;
+        margin-top: -50px;
         list-style: none;
         position: fixed;
         top: 50%;
         transform: translateY(-50%);
         right: 30px;
+
     }
     .vertLine {
-        height: 170px;
-        width: 2px;
-        border: 1px solid rgb(199,199,201);
-        margin-left: 92px;
-        margin-top: -200px;
-        font: xx-small rgb(199,199,201);
+        height: 250px;
+        position: absolute;
+        border: 1px solid #c7c7c9;
+        margin-left: 102px;
+        margin-top: -260px;
+        z-index: -1;
     }
     .circle {
         top: 50%;
-        margin-left: 60px;
+        margin-left: 92px;
         margin-top: -20px;
-        width: 20px;
-        height: 20px;
-        border-radius: 10px;
+        width: 22px;
+        height: 22px;
+        border-radius: 12px;
         border: 1px solid rgb(199,199,201);
         background-color: rgb(199,199,201);
     }
