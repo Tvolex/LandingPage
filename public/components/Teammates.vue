@@ -17,11 +17,11 @@
                     </v-flex>
                     <v-flex xs12 class="text-xs-center teammatesAvatarsLine">
                         <v-layout row no-wrap>
-                            <v-flex xs1>
-                                <v-icon>keyboard_arrow_left</v-icon>
-                            </v-flex>
-                            <swiper :options="swiperOption">
-                                <swiper-slide  v-for="teammate in teammates" :key="teammate.name">
+                            <!--<v-flex xs1>-->
+                                <!--<v-icon>keyboard_arrow_left</v-icon>-->
+                            <!--</v-flex>-->
+                            <swiper :options="swiperOption" class="swiper-container" ref="swiper">
+                                <swiper-slide  v-for="teammate in teammates" data-swiper-autoplay="5000"  :key="teammate.name">
                                     <v-avatar size="150" class="grey lighten-4"
                                             style="cursor: pointer; margin:10px"
                                             v-on:click="selectTeammate(teammate)">
@@ -30,9 +30,9 @@
                                 </swiper-slide>
                                 <div class="swiper-scrollbar" slot="scrollbar"></div>
                             </swiper>
-                            <v-flex xs1>
-                                <v-icon>keyboard_arrow_right</v-icon>
-                            </v-flex>
+                            <!--<v-flex xs1>-->
+                                <!--<v-icon>keyboard_arrow_right</v-icon>-->
+                            <!--</v-flex>-->
                         </v-layout>
                     </v-flex>
                     <v-flex xs12>
@@ -77,12 +77,15 @@
                 currentTeammate: null,
                 swiperOption: {
                     scrollbar: '.swiper-scrollbar',
-                    scrollbarHide: true,
+                    scrollbarHide: false,
                     slidesPerView: 'auto',
                     centeredSlides: true,
-                    spaceBetween: 30,
-                    grabCursor: true
-                }
+                    spaceBetween: 50,
+                    grabCursor: true,
+                    speed: 300,
+                    delay: 5000,
+                    autoplay: true,
+                },
             }
         },
 
@@ -92,23 +95,35 @@
 
         created() {
             this.currentTeammate = this.$store.getters.teammates[0];
+            this.swiperOption.autoplay = this.$store.getters.mobile;
+        },
+        mounted() {
+            if (this.mobile) {
+                var myFuckingSwiper = this.$refs.swiper.swiper;
+                var st = this.selectTeammate;
+
+                myFuckingSwiper.on('transitionStart', function () {
+                    st(myFuckingSwiper.realIndex)
+                });
+            }
+
         },
 
         computed: {
             teammates() {
                 return this.$store.getters.teammates;
+            },
 
+            mobile() {
+                return this.$store.getters.mobile;
             }
         },
 
         methods: {
             selectTeammate(teammate) {
-                this.currentTeammate = teammate;
-            },
-
-            enter: function (el, done) {
-                alert("2");
-                done()
+                Number.isInteger(teammate) ?
+                    this.currentTeammate = this.teammates[teammate] :
+                    this.currentTeammate = teammate;
             },
         },
     }

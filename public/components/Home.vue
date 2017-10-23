@@ -31,16 +31,16 @@
     .img {
         margin-top: -65px;
         height: 110vh;
+        width: 100vw;
         background-size: cover;
         background-position: center;
-
     }
     .home-text {
         text-align: center;
         position: absolute;
         bottom: 60%;
         height: 100px;
-        width: 400px;
+        width: 300px;
         font-family: 'effloresce';
 
         font-size: 250%;
