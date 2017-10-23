@@ -15,7 +15,7 @@
                     <!--</div>-->
                 <!--</div>-->
                 <v-flex xs12 sm8 offset-sm2>
-                    <v-layout row>
+                    <v-layout row class="text-latest-work">
                         LATEST WORK
                     </v-layout>
                     <v-layout row wrap>
@@ -102,6 +102,11 @@
 </script>
 
 <style scoped>
+    .text-latest-work {
+        font-family: "effloresce";
+        font-size: 250%;
+        letter-spacing: 15px;
+    }
     .btnViewMore {
         margin-right: 20px;
     }

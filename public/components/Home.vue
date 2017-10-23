@@ -27,12 +27,7 @@
 </script>
 
 <style scoped>
-    @font-face {
-        font-family: 'effloresce'; /*a name to be used later*/
-        src: url('../fonts/effloresce.ttf') format('truetype'); /*URL to font*/
-        font-weight: normal;
-        font-style: normal;
-    }
+
     .img {
         margin-top: -65px;
         height: 110vh;
