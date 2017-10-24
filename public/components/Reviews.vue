@@ -109,7 +109,9 @@
     .reviews {
         padding-top: 10%;
     }
-
+    .swiper-pagination {
+        position: relative;
+    }
     .swiper-pagination-bullet {
         background-color: white;
     }

@@ -6,13 +6,13 @@
                     <v-list-tile-action>
                         <v-icon>account_circle</v-icon>
                     </v-list-tile-action>
-                    <v-list-tile-content>ATP</v-list-tile-content>
+                    <v-list-tile-content>APT</v-list-tile-content>
                 </v-list-tile>
                 <hr>
 
                 <v-list-tile v-for="item in items" :key="item.title" :to="item.link">
                     <v-list-tile-action>
-                        <v-icon>account_circle</v-icon>
+                        <v-icon>{{item.icon}}</v-icon>
                     </v-list-tile-action>
                     <v-list-tile-content>{{ item.text }}</v-list-tile-content>
                 </v-list-tile>
@@ -64,11 +64,11 @@
             return {
                 sideNav: false,
                 items: [
-                    {text: 'Home', link: "#Home"},
-                    {text: 'Skills', link: "#Works"},
-                    {text: 'Reviews', link: "#Reviews"},
-                    {text: "Team", link: "#Team"},
-                    {text: "Contact", link: "#Contact"},
+                    {text: 'Home', link: "#Home", icon: "home"},
+                    {text: 'Skills', link: "#Works", icon: "done_all"},
+                    {text: 'Reviews', link: "#Reviews", icon: "feedback"},
+                    {text: "Team", link: "#Team", icon: "perm_identity"},
+                    {text: "Contact", link: "#Contact", icon: "call"},
                 ],
             }
         },

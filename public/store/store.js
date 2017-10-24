@@ -67,22 +67,22 @@ export const store = new Vuex.Store({
                 {
                     name: "Ashan Habadudi",
                     text: "Great works, skills and girls",
-                    photo: "https://randomuser.me/api/portraits/men/50.jpg"
+                    photo: "https://randomuser.me/api/portraits/men/38.jpg"
                 },
                 {
-                    name: "Jason Statham",
+                    name: "Jason Swilth",
                     text: "Great works, skills and girls",
-                    photo: "https://www.thefamouspeople.com/profiles/images/jason-statham-3.jpg"
+                    photo: "https://randomuser.me/api/portraits/men/45.jpg"
                 },
                 {
-                    name: "Dwayne Johnson",
+                    name: "Dwayne Garbage",
                     text: "Great works, skills and girls",
-                    photo: "http://www4.pictures.zimbio.com/gi/Premiere+CBS+Films+Faster+Arrivals+osL6K6cJ8YWx.jpg"
+                    photo: "https://randomuser.me/api/portraits/men/35.jpg"
                 },
                 {
                     name: "Ambibi Dubi",
                     text: "Great works, skills and projects",
-                    photo: "https://randomuser.me/api/portraits/men/15.jpg"
+                    photo: "https://randomuser.me/api/portraits/men/78.jpg"
                 },
             ];
 
