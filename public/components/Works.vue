@@ -111,7 +111,7 @@
         margin-right: 20px;
     }
     .card {
-        margin: 20px 10px 10px 00px;
+        margin: 20px 00px 10px 00px;
     }
     .headline-Latest-Work {
         font-size: xx-large;

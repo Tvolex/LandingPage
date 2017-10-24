@@ -1,7 +1,7 @@
 <template>
     <v-app id="app" onresize="mobile">
         <my-header></my-header>
-        <v-flex xs1 offset-xs11 lg1 offset-lg11>
+        <v-flex class="hidden-xs-only" xs1 offset-xs11 lg1 offset-lg11>
             <div class="stepper">
 
                 <div class="card-nav">

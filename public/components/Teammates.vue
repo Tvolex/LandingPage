@@ -28,7 +28,8 @@
                                         <img :src="teammate.photo" alt="avatar">
                                     </v-avatar>
                                 </swiper-slide>
-                                <div class="swiper-scrollbar" slot="scrollbar"></div>
+                                <div class="swiper-button-prev" slot="button-prev"></div>
+                                <div class="swiper-button-next" slot="button-next"></div>
                             </swiper>
                             <!--<v-flex xs1>-->
                                 <!--<v-icon>keyboard_arrow_right</v-icon>-->
@@ -76,8 +77,8 @@
             return {
                 currentTeammate: null,
                 swiperOption: {
-                    scrollbar: '.swiper-scrollbar',
-                    scrollbarHide: false,
+                    nextButton: '.swiper-button-next',
+                    prevButton: '.swiper-button-prev',
                     slidesPerView: 'auto',
                     centeredSlides: true,
                     spaceBetween: 50,
@@ -130,6 +131,12 @@
 </script>
 
 <style scoped>
+    .swiper-button-prev {
+        background-image: url("../imgs/navigate_before.png");
+    }
+    .swiper-button-next {
+        background-image: url("../imgs/navigate_next.png");
+    }
     .swiper-pagination {
         margin-top: 5%;
     }
