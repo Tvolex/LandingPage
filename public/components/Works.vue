@@ -20,7 +20,7 @@
                     </v-layout>
                     <v-layout row wrap>
                         <v-flex xs12 sm6 md4 lg3  v-for="item in items" :key="item._id">
-                            <v-card style="cursor:pointer;">
+                            <v-card >
                                 <v-card-media :src="item.src" height="200px"></v-card-media>
                                 <div class="workBlockText">Lorem ipsum dolor sit amet.</div>
                             </v-card>
@@ -97,6 +97,12 @@
                     }
                 ]
             }
+        },
+
+        computed: {
+            mobile() {
+                return this.$store.getters.mobile;
+            },
         }
     }
 </script>
@@ -110,14 +116,12 @@
     .btnViewMore {
         margin-right: 20px;
     }
-    .card {
-        margin: 20px 00px 10px 00px;
-    }
     .headline-Latest-Work {
         font-size: xx-large;
     }
-    .item-card {
-
+    .card {
+        cursor: pointer;
+        margin: 20px 10px 10px 10px;
     }
     .items {
 
