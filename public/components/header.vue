@@ -87,6 +87,7 @@
     }
     .toolbar {
         box-shadow: none;
-        background-color: rgb(216, 217, 218)
+        background-color: rgb(216, 217, 218);
+        z-index: 10;
     }
 </style>
