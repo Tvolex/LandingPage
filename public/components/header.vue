@@ -1,29 +1,7 @@
 <template >
     <div dark style="max-height: 1px">
-        <v-navigation-drawer temporary v-model="sideNav">
-            <v-list>
-                <v-list-tile to="#">
-                    <v-list-tile-action>
-                        <v-icon>account_circle</v-icon>
-                    </v-list-tile-action>
-                    <v-list-tile-content>APT</v-list-tile-content>
-                </v-list-tile>
-                <hr>
 
-                <v-list-tile v-for="item in items" :key="item.title" :to="item.link">
-                    <v-list-tile-action>
-                        <v-icon>{{item.icon}}</v-icon>
-                    </v-list-tile-action>
-                    <v-list-tile-content>{{ item.text }}</v-list-tile-content>
-                </v-list-tile>
-
-
-
-            </v-list>
-
-        </v-navigation-drawer>
         <v-toolbar light class="toolbar">
-            <v-toolbar-side-icon @click.stop="sideNav = !sideNav"></v-toolbar-side-icon>
             <v-spacer></v-spacer>
 
             <v-toolbar-items>
@@ -62,7 +40,6 @@
         data() {
 
             return {
-                sideNav: false,
                 items: [
                     {text: 'Home', link: "#Home", icon: "home"},
                     {text: 'Skills', link: "#Works", icon: "done_all"},

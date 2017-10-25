@@ -67,7 +67,7 @@ export const store = new Vuex.Store({
                 {
                     name: "Ashan Habadudi",
                     text: "Great works, skills and girls",
-                    photo: "https://randomuser.me/api/portraits/men/38.jpg"
+                    photo: "https://randomuser.me/api/portraits/men/11.jpg"
                 },
                 {
                     name: "Jason Swilth",

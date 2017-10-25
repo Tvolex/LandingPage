@@ -17,23 +17,26 @@
                     </v-flex>
                     <v-flex xs12 class="text-xs-center teammatesAvatarsLine">
                         <v-layout row no-wrap>
-                            <!--<v-flex xs1>-->
-                                <!--<v-icon>keyboard_arrow_left</v-icon>-->
-                            <!--</v-flex>-->
-                            <swiper :options="swiperOption" class="swiper-container" ref="swiper">
-                                <swiper-slide  v-for="teammate in teammates" data-swiper-autoplay="5000"  :key="teammate.name">
-                                    <v-avatar size="150" class="grey lighten-4"
-                                            style="cursor: pointer; margin:10px"
-                                            v-on:click="selectTeammate(teammate)">
-                                        <img :src="teammate.photo" alt="avatar">
-                                    </v-avatar>
-                                </swiper-slide>
+                            <v-flex xs1 style="text-align: -webkit-right;">
                                 <div class="swiper-button-prev" slot="button-prev"></div>
+                            </v-flex>
+                            <v-flex xs10>
+                                <swiper :options="swiperOption" class="swiper-container" ref="swiper">
+                                    <swiper-slide  v-for="teammate in teammates" data-swiper-autoplay="5000"  :key="teammate.name">
+                                        <v-avatar size="150" class="grey lighten-4"
+                                                  style="cursor: pointer; margin:10px"
+                                                  v-on:click="selectTeammate(teammate)">
+                                            <img :src="teammate.photo" alt="avatar">
+                                        </v-avatar>
+                                    </swiper-slide>
+                                </swiper>
+                            </v-flex>
+
+                            <v-flex xs1>
                                 <div class="swiper-button-next" slot="button-next"></div>
-                            </swiper>
-                            <!--<v-flex xs1>-->
-                                <!--<v-icon>keyboard_arrow_right</v-icon>-->
-                            <!--</v-flex>-->
+                            </v-flex>
+
+
                         </v-layout>
                     </v-flex>
                     <v-flex xs12>
@@ -132,9 +135,17 @@
 
 <style scoped>
     .swiper-button-prev {
+        position: relative;
+        top: 60px;
+        left: 0px;
+        margin-top: 0px;
         background-image: url("../imgs/navigate_before.png");
     }
     .swiper-button-next {
+        position: relative;
+        top: 60px;
+        right: 0px;
+        margin-top: 0px;
         background-image: url("../imgs/navigate_next.png");
     }
     .swiper-pagination {
