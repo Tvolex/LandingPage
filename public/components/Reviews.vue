@@ -3,11 +3,11 @@
         <v-parallax src="imgs/3.jpg" jumbotron>
             <v-container float>
                 <v-layout row wrap class="reviews">
-                    <v-flex xs12 offset-xs0 sm10 offset-sm1 md10 offset-md2>
+                    <v-flex xs12 offset-xs0 sm8 offset-sm2 md6 offset-md3>
                         <swiper :options="swiperOption">
                             <swiper-slide v-for="item in reviews" :key="item.name" data-swiper-autoplay="3000">
                                 <v-layout row wrap>
-                                    <v-flex xs12 sm5 offset-xs1>
+                                    <v-flex xs12 sm5 class="text-xs-center text-md-left">
                                         <v-avatar size="200"  class="grey lighten-4">
                                             <img :src="item.photo" width="150px" class="" alt="avatar">
                                         </v-avatar>
@@ -15,7 +15,7 @@
                                             {{item.name}}
                                         </v-card-title>
                                     </v-flex>
-                                    <v-flex xs12 sm6>
+                                    <v-flex xs12 sm6 class="text-xs-right text-md-left">
                                         <v-card-title>
                                             {{item.text}}
                                         </v-card-title>
@@ -43,14 +43,14 @@
                 item: 0,
                 showReview: true,
                 swiperOption: {
-                    pagination: '.swiper-pagination',
+                    speed: 1000,
+                    autoplay: true,
+                    spaceBetween: 30,
                     paginationClickable: true,
+                    iOSEdgeSwipeDetection: true,
+                    pagination: '.swiper-pagination',
                     nextButton: '.swiper-button-next',
                     prevButton: '.swiper-button-prev',
-                    spaceBetween: 30,
-                    autoplay: true,
-                    speed: 1000,
-                    iOSEdgeSwipeDetection: true,
                 }
             }
         },
@@ -58,33 +58,11 @@
             this.$store.dispatch('reviews');
         },
 
-        methods: {
-            getRandomNub(min, max) {
-                return Math.random() * (max - min)  + min;
-            },
-
-            setVisible() {
-                this.showReview = !this.showReview;
-            },
-
-            nextReview() {
-                this.showReview = !this.showReview ;
-                this.item = this.item + 1;
-                setTimeout(this.setVisible, 800);
-            }
-        },
-
         computed: {
             reviews() {
                 return  this.$store.getters.reviews;
             },
         },
-
-        watch: {
-            reviews (oldVal, val) {
-
-            }
-        }
     }
 </script>
 
@@ -101,7 +79,6 @@
     .avatar-name {
         font-size: large;
         color: white;
-        width: 200px;
     }
     .application--light .card, .application .theme--light.card {
         background-color: transparent;

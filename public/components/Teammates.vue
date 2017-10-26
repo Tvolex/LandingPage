@@ -80,15 +80,15 @@
             return {
                 currentTeammate: null,
                 swiperOption: {
-                    nextButton: '.swiper-button-next',
-                    prevButton: '.swiper-button-prev',
-                    slidesPerView: 'auto',
-                    centeredSlides: true,
-                    spaceBetween: 50,
-                    grabCursor: true,
                     speed: 300,
                     delay: 5000,
                     autoplay: true,
+                    grabCursor: true,
+                    spaceBetween: 50,
+                    centeredSlides: true,
+                    slidesPerView: 'auto',
+                    nextButton: '.swiper-button-next',
+                    prevButton: '.swiper-button-prev',
                 },
             }
         },
@@ -101,6 +101,7 @@
             this.currentTeammate = this.$store.getters.teammates[0];
             this.swiperOption.autoplay = this.$store.getters.mobile;
         },
+
         mounted() {
             if (this.mobile) {
                 var myFuckingSwiper = this.$refs.swiper.swiper;
