@@ -1,6 +1,6 @@
 <template>
     <main id="Team">
-        <v-parallax src="imgs/4.jpg" height="700">
+        <v-parallax src="imgs/4.jpg" height="650">
             <v-container float>
                 <v-layout row wrap class="team">
                     <v-flex xs12 class="text-xs-center">
