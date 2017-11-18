@@ -4,9 +4,9 @@
         <v-container fluid>
             <v-layout row wrap>
                 <v-flex xs12 md4 offset-md6 >
-                    <div class="home-text text-xs-left text-md-center" :style="mobile ? bottomMobile2 : noMobile" style="letter-spacing: 10px;">WEB DESIGN</div>
+                    <div class="home-text text-xs-left text-md-center" :style="mobile ? bottomMobile1 : noBottomMobile1" style="letter-spacing: 10px;">WEB DESIGN</div>
                     <br>
-                    <div class="home-text text-xs-left text-md-center" :style="mobile ? bottomMobile1 : noMobile" style="font-size: 120%; bottom: 50%; letter-spacing: 5px">MADE WITH LOVE</div>
+                    <div class="home-text text-xs-left text-md-center" :style="mobile ? bottomMobile2 : noBottomMobile2" style="font-size: 120%; bottom: 50%; letter-spacing: 5px">MADE WITH LOVE</div>
                 </v-flex>
                 <v-flex xs12  >
                     <router-link
@@ -42,11 +42,17 @@
                 noMobile: {
                     "height": "100vh",
                 },
+                noBottomMobile1: {
+                    "bottom": "60%",
+                },
+                noBottomMobile2: {
+                    "bottom": "50%",
+                },
                 bottomMobile1: {
-                    "bottom": "30%",
+                    "bottom": "40%",
                 },
                 bottomMobile2: {
-                    "bottom": "40%",
+                    "bottom": "30%",
                 }
             }
         },
